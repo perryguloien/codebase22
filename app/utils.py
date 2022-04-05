@@ -5,12 +5,9 @@
 
 def to_usd(my_price):
     """
-    This is a docstring. It tells us what this function is about.
-    What its responsibilities are. 
-    What the params are about. 
-    What datatypes the params are. 
-    What this fucntion will return.
-    Example of invoking the function.
+    to_usd converts ordinary floats to a formatted currency.
+    my_price is the number that is inputted as a float. 
+    to_usd should return a formatted number with a dollar sign and two decimal places
 
     Invoke like this: to_usd(9.99999)
     
