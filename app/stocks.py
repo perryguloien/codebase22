@@ -22,5 +22,4 @@ latest = df.iloc[0]
 
 print(symbol)
 print(latest["timestamp"])
-print(latest["close"])
 print(to_usd(latest["close"]))
