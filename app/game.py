@@ -8,6 +8,21 @@ from random import choice
 
 def determine_winner(user_choice, computer_choice):
     #return "paper"
+    """
+    The determine_winner function allows us to refactor 
+    the code and make it more simple to understand. Instead
+    of having several if statements, we can define the function
+    here and make the winner determination logic more clear.
+    user_choice is the inputted choice from the user 
+    computer_choice is the randomly generated computer choice
+    from the list of valid selections.
+    Both parameters are strings.
+    The function returns the choice of the winner (i.e the computer or user)
+
+    Invoke like this: determine_winner(rock, scissors)
+    
+    Example return value "rock"
+    """
     winners = {
         "rock": {
             "rock": None,
