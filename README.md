@@ -66,10 +66,11 @@ Run the crypto report:
 ```sh
 python -m app.crypto
 ```
-Running tests for code: 
-
+Running tests game.py and utils.py: 
+This 
 ```sh
-
+pytest
+```
 
 
 
