@@ -8,6 +8,7 @@ from random import choice
 
 def determine_winner(user_choice, computer_choice):
     #return "paper"
+
     """
     The determine_winner function allows us to refactor 
     the code and make it more simple to understand. Instead
@@ -23,6 +24,7 @@ def determine_winner(user_choice, computer_choice):
     
     Example return value "rock"
     """
+
     winners = {
         "rock": {
             "rock": None,
