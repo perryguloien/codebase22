@@ -46,13 +46,7 @@ def determine_winner(user_choice, computer_choice):
     return winning_choice
     #return "OOPS"
 
-
-
-
 if __name__ == "__main__":
-
-
-
 
 
     valid_selections = ["rock", "paper", "scissors"] # only have to update in one place
