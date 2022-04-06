@@ -7,21 +7,22 @@ import os
 import json
 from dotenv import load_dotenv
 import requests
+from app.alphavantage_service import fetch_unemployment_data
 
 load_dotenv()
 
-ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="demo")
+# ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="demo")
 
-# docs: https://www.alphavantage.co/documentation/#unemployment
-url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
-response = requests.get(url)
-parsed_response = json.loads(response.text)
-#print(parsed_response)
+# # docs: https://www.alphavantage.co/documentation/#unemployment
+# url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
+# response = requests.get(url)
+# parsed_response = json.loads(response.text)
 
-data = parsed_response["data"]
+print(fetch_unemployment_data())
+
+data = fetch_unemployment_data()["data"]
 latest = data[0]
 print(latest) #> {'date': '2022-02-01', 'value': '3.8'}
-
 
 #exit()
 

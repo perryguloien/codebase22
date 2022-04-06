@@ -16,6 +16,6 @@ from app.utils import to_usd
 def test_to_usd():
     # it rounds to two decimal places and have dollar sign :
     assert to_usd(0.45555) == "$0.46"
-    
+
     # if large numbers, should use comma separator:
     assert to_usd(123456789.98) == "$123,456,789.98"
