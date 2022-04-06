@@ -22,7 +22,6 @@ data = parsed_response["data"]
 latest = data[0]
 print(latest) #> {'date': '2022-02-01', 'value': '3.8'}
 
-
 #exit()
 
 #

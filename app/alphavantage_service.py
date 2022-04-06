@@ -7,6 +7,7 @@
 import os
 from dotenv import load_dotenv
 from app.utils import to_usd
+from pandas import read_csv
 import requests
 import json
 
@@ -25,14 +26,17 @@ def fetch_crypto_data(symbol):
 
 
 def fetch_stocks_data(symbol):
-    # url = ...
-    # make a request
-    # return some data
-    return "TODO"
+    url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={ALPHAVANTAGE_API_KEY}&datatype=csv"
 
+    df = read_csv(url)
+    #print(df.columns)
+    #breakpoint()
+    latest = df.iloc[0]
+    return latest
 
 def fetch_unemployment_data():
-    # url = ...
-    # make a request
-    # return some data
-    return "TODO"
+    url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
+    response = requests.get(url)
+    parsed_response = json.loads(response.text)
+    
+    return parsed_response
